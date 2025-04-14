@@ -10,7 +10,7 @@ function Header() {
 
                         <div className="col-sm-4 col-lg-3 text-center text-sm-start">
                             <div className="main-logo">
-                                <Link to="index.html">
+                                <Link to="/">
                                     <img src={Logo} alt="" />
                                     {/* <img alt="logo" className="img-fluid" /> */}
                                 </Link>
@@ -118,18 +118,18 @@ function Header() {
                                             <li className="nav-item dropdown">
                                                 <a className="nav-link dropdown-toggle" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
                                                 <ul className="dropdown-menu" aria-labelledby="pages">
-                                                    <li><Link to="index.html" className="dropdown-item">About Us </Link></li>
-                                                    <li><Link to="index.html" className="dropdown-item">Shop </Link></li>
-                                                    <li><Link to="index.html" className="dropdown-item">Single Product </Link></li>
-                                                    <li><Link to="index.html" className="dropdown-item">Cart </Link></li>
-                                                    <li><Link to="index.html" className="dropdown-item">Checkout </Link></li>
-                                                    <li><Link to="index.html" className="dropdown-item">Blog </Link></li>
-                                                    <li><Link to="index.html" className="dropdown-item">Single Post </Link></li>
-                                                    <li><Link to="index.html" className="dropdown-item">Styles </Link></li>
-                                                    <li><Link to="index.html" className="dropdown-item">Contact </Link></li>
-                                                    <li><Link to="index.html" className="dropdown-item">Thank You </Link></li>
-                                                    <li><Link to="index.html" className="dropdown-item">My Account </Link></li>
-                                                    <li><Link to="index.html" className="dropdown-item">404 Error </Link></li>
+                                                    <li><Link to="/" className="dropdown-item">About Us </Link></li>
+                                                    <li><Link to="/" className="dropdown-item">Shop </Link></li>
+                                                    <li><Link to="/" className="dropdown-item">Single Product </Link></li>
+                                                    <li><Link to="/" className="dropdown-item">Cart </Link></li>
+                                                    <li><Link to="/" className="dropdown-item">Checkout </Link></li>
+                                                    <li><Link to="/" className="dropdown-item">Blog </Link></li>
+                                                    <li><Link to="/" className="dropdown-item">Single Post </Link></li>
+                                                    <li><Link to="/" className="dropdown-item">Styles </Link></li>
+                                                    <li><Link to="/" className="dropdown-item">Contact </Link></li>
+                                                    <li><Link to="/" className="dropdown-item">Thank You </Link></li>
+                                                    <li><Link to="/" className="dropdown-item">My Account </Link></li>
+                                                    <li><Link to="/" className="dropdown-item">404 Error </Link></li>
                                                 </ul>
                                             </li>
                                             <li className="nav-item">

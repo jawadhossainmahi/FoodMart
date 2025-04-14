@@ -38,7 +38,7 @@ function TrendingProduct() {
                                                     <span className="badge bg-success position-absolute m-3">-30%</span>
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbBananas} className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -69,7 +69,7 @@ function TrendingProduct() {
                                                     <span className="badge bg-success position-absolute m-3">-30%</span>
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbBiscuits} className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -99,7 +99,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbCucumber} className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -134,7 +134,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbMilk} className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -169,7 +169,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbBananas} className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -199,7 +199,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbBiscuits} className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -229,7 +229,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbCucumber}className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -259,7 +259,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbMilk} className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -289,7 +289,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbBananas} className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -319,7 +319,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbBiscuits}className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -359,7 +359,7 @@ function TrendingProduct() {
                                                     <span className="badge bg-success position-absolute m-3">-30%</span>
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbCucumber}className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -390,7 +390,7 @@ function TrendingProduct() {
                                                     <span className="badge bg-success position-absolute m-3">-30%</span>
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbMilk} className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -421,7 +421,7 @@ function TrendingProduct() {
                                                     <span className="badge bg-success position-absolute m-3">-30%</span>
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbOrangeJuice} className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -451,7 +451,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbRaspBerriese} className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -481,7 +481,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbBananas}className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -511,7 +511,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbBananas}className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -549,7 +549,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbCucumber}className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -579,7 +579,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbMilk} className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -609,7 +609,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbTomatoes}className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -639,7 +639,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbTomatoketchup} className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -669,7 +669,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbBananas}className="tab-image" />
                                                         </Link>
                                                     </figure>
@@ -699,7 +699,7 @@ function TrendingProduct() {
                                                 <div className="product-item">
                                                     <Link to="#" className="btn-wishlist"><svg width="24" height="24"><use xlinkHref="#heart"></use></svg></Link>
                                                     <figure>
-                                                        <Link to="index.html" title="Product Title">
+                                                        <Link to="/" title="Product Title">
                                                             <img src={ThumbBananas}className="tab-image" />
                                                         </Link>
                                                     </figure>

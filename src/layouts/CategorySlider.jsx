@@ -39,60 +39,60 @@ function CategorySlider() {
                                 nextEl: '.category-carousel-next',
                                 prevEl: '.category-carousel-prev',
                             }} slidesPerView={6} spaceBetween={30} className="category-carousel" modules={[Navigation]}>
-                                <SwiperSlide><Link to="index.html" className="nav-link category-item swiper-slide">
+                                <SwiperSlide><Link to="/" className="nav-link category-item swiper-slide">
                                     <img src={Icon_vegetable_broccoli} alt="Category Thumbnail" />
                                     <h3 className="category-title">Fruits & Veges</h3>
                                 </Link></SwiperSlide>
-                                <SwiperSlide>   <Link to="index.html" className="nav-link category-item swiper-slide">
+                                <SwiperSlide>   <Link to="/" className="nav-link category-item swiper-slide">
                                     <img src={Icon_bread_bague} alt="Category Thumbnail" />
                                     <h3 className="category-title">Breads & Sweets</h3>
                                 </Link></SwiperSlide>
                                 <SwiperSlide>
-                                    <Link to="index.html" className="nav-link category-item swiper-slide">
+                                    <Link to="/" className="nav-link category-item swiper-slide">
                                         <img src={Icon_soft_drink} alt="Category Thumbnail" />
                                         <h3 className="category-title">Fruits & Veges</h3>
                                     </Link></SwiperSlide>
-                                <SwiperSlide>  <Link to="index.html" className="nav-link category-item swiper-slide">
+                                <SwiperSlide>  <Link to="/" className="nav-link category-item swiper-slide">
                                     <img src={Icon_wine_g} alt="Category Thumbnail" />
                                     <h3 className="category-title">Fruits & Veges</h3>
                                 </Link></SwiperSlide>
-                                <SwiperSlide> <Link to="index.html" className="nav-link category-item swiper-slide">
+                                <SwiperSlide> <Link to="/" className="nav-link category-item swiper-slide">
                                     <img src={Icon_animal_p} alt="Category Thumbnail" />
                                     <h3 className="category-title">Fruits & Veges</h3>
                                 </Link></SwiperSlide>
                                 <SwiperSlide>
-                                    <Link to="index.html" className="nav-link category-item swiper-slide">
+                                    <Link to="/" className="nav-link category-item swiper-slide">
                                         <img src={Icon_bread_h} alt="Category Thumbnail" />
                                         <h3 className="category-title">Fruits & Veges</h3>
                                     </Link></SwiperSlide>
                                 <SwiperSlide>
 
-                                    <Link to="index.html" className="nav-link category-item swiper-slide">
+                                    <Link to="/" className="nav-link category-item swiper-slide">
                                         <img src={Icon_vegetable_broccoli} alt="Category Thumbnail" />
                                         <h3 className="category-title">Fruits & Veges</h3>
                                     </Link></SwiperSlide>
-                                <SwiperSlide> <Link to="index.html" className="nav-link category-item swiper-slide">
+                                <SwiperSlide> <Link to="/" className="nav-link category-item swiper-slide">
                                     <img src={Icon_vegetable_broccoli} alt="Category Thumbnail" />
                                     <h3 className="category-title">Fruits & Veges</h3>
                                 </Link></SwiperSlide>
                                 <SwiperSlide>
-                                    <Link to="index.html" className="nav-link category-item swiper-slide">
+                                    <Link to="/" className="nav-link category-item swiper-slide">
                                         <img src={Icon_vegetable_broccoli} alt="Category Thumbnail" />
                                         <h3 className="category-title">Fruits & Veges</h3>
                                     </Link></SwiperSlide>
                                 <SwiperSlide>
-                                    <Link to="index.html" className="nav-link category-item swiper-slide">
+                                    <Link to="/" className="nav-link category-item swiper-slide">
                                         <img src={Icon_vegetable_broccoli} alt="Category Thumbnail" />
                                         <h3 className="category-title">Fruits & Veges</h3>
                                     </Link></SwiperSlide>
                                 <SwiperSlide>
-                                    <Link to="index.html" className="nav-link category-item swiper-slide">
+                                    <Link to="/" className="nav-link category-item swiper-slide">
                                         <img src={Icon_vegetable_broccoli} alt="Category Thumbnail" />
                                         <h3 className="category-title">Fruits & Veges</h3>
                                     </Link>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <Link to="index.html" className="nav-link category-item swiper-slide">
+                                    <Link to="/" className="nav-link category-item swiper-slide">
                                         <img src={Icon_vegetable_broccoli} alt="Category Thumbnail" />
                                         <h3 className="category-title">Fruits & Veges</h3>
                                     </Link>
