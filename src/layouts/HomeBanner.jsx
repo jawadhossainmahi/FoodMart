@@ -15,6 +15,7 @@ import Pthumb_1 from "../assets/images/product-thumb-1.png";
 import Pthumb_2 from "../assets/images/product-thumb-2.png";
 import Ad_img_1 from "../assets/images/ad-image-1.png";
 import Ad_img_2 from "../assets/images/ad-image-2.png";
+import { Link } from 'react-router';
 function HomeBanner() {
     return (
         <>
@@ -29,14 +30,14 @@ function HomeBanner() {
 
                                 <div className="banner-ad large bg-info block-1">
 
-                                    <Swiper pagination={true} modules={[Pagination]} className='main-swiper'>
+                                    <Swiper pagination={{ clickable: true }} modules={[Pagination]} className='main-swiper'>
                                         <SwiperSlide>
                                             <div className="row banner-content p-5">
                                                 <div className="content-wrapper col-md-7">
                                                     <div className="categories my-3">100% natural</div>
                                                     <h3 className="display-4">Fresh Smoothie & Summer Juice</h3>
                                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
-                                                    <a href="#" className="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Shop Now</a>
+                                                    <Link to="#" className="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Shop Now</Link>
                                                 </div>
                                                 <div className="img-wrapper col-md-5">
                                                     <img src="" className="img-fluid" />
@@ -50,7 +51,7 @@ function HomeBanner() {
                                                     <div className="categories mb-3 pb-3">100% natural</div>
                                                     <h3 className="banner-title">Fresh Smoothie & Summer Juice</h3>
                                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
-                                                    <a href="#" className="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">Shop Collection</a>
+                                                    <Link to="#" className="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">Shop Collection</Link>
                                                 </div>
                                                 <div className="img-wrapper col-md-5">
                                                     <img src={Pthumb_1} className="img-fluid" />
@@ -64,7 +65,7 @@ function HomeBanner() {
                                                     <div className="categories mb-3 pb-3">100% natural</div>
                                                     <h3 className="banner-title">Heinz Tomato Ketchup</h3>
                                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
-                                                    <a href="#" className="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">Shop Collection</a>
+                                                    <Link to="#" className="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">Shop Collection</Link>
                                                 </div>
                                                 <div className="img-wrapper col-md-5">
                                                     <img src={Pthumb_2} className="img-fluid" />
@@ -91,7 +92,7 @@ function HomeBanner() {
                                         <div className="content-wrapper col-md-7">
                                             <div className="categories sale mb-3 pb-3">20% off</div>
                                             <h3 className="banner-title">Fruits & Vegetables</h3>
-                                            <a href="#" className="d-flex align-items-center nav-link">Shop Collection <svg width="24" height="24"><use xlinkHref="#arrow-right"></use></svg></a>
+                                            <Link to="#" className="d-flex align-items-center nav-link">Shop Collection <svg width="24" height="24"><use to="#arrow-right"></use></svg></Link>
                                         </div>
 
                                     </div>
@@ -104,7 +105,7 @@ function HomeBanner() {
                                         <div className="content-wrapper col-md-7">
                                             <div className="categories sale mb-3 pb-3">15% off</div>
                                             <h3 className="item-title">Baked Products</h3>
-                                            <a href="#" className="d-flex align-items-center nav-link">Shop Collection <svg width="24" height="24"><use xlinkHref="#arrow-right"></use></svg></a>
+                                            <Link to="#" className="d-flex align-items-center nav-link">Shop Collection <svg width="24" height="24"><use to="#arrow-right"></use></svg></Link>
                                         </div>
 
                                     </div>

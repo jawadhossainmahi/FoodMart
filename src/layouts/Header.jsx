@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from "../assets/images/logo.png";
+import { Link } from 'react-router';
 function Header() {
     return (
         <>
@@ -9,10 +10,10 @@ function Header() {
 
                         <div className="col-sm-4 col-lg-3 text-center text-sm-start">
                             <div className="main-logo">
-                                <a href="index.html">
+                                <Link to="index.html">
                                     <img src={Logo} alt="" />
                                     {/* <img alt="logo" className="img-fluid" /> */}
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
@@ -45,24 +46,24 @@ function Header() {
 
                             <ul className="d-flex justify-content-end list-unstyled m-0">
                                 <li>
-                                    <a href="#" className="rounded-circle bg-light p-2 mx-1">
+                                    <Link to="#" className="rounded-circle bg-light p-2 mx-1">
                                         <svg width="24" height="24" viewBox="0 0 24 24"><use xlinkHref="#user"></use></svg>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="rounded-circle bg-light p-2 mx-1">
+                                    <Link to="#" className="rounded-circle bg-light p-2 mx-1">
                                         <svg width="24" height="24" viewBox="0 0 24 24"><use xlinkHref="#heart"></use></svg>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="d-lg-none">
-                                    <a href="#" className="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                                    <Link to="#" className="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
                                         <svg width="24" height="24" viewBox="0 0 24 24"><use xlinkHref="#cart"></use></svg>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="d-lg-none">
-                                    <a href="#" className="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">
+                                    <Link to="#" className="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">
                                         <svg width="24" height="24" viewBox="0 0 24 24"><use xlinkHref="#search"></use></svg>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
 
@@ -103,42 +104,42 @@ function Header() {
 
                                         <ul className="navbar-nav justify-content-end menu-list list-unstyled d-flex gap-md-3 mb-0">
                                             <li className="nav-item active">
-                                                <a href="#women" className="nav-link">Women</a>
+                                                <Link to="#women" className="nav-link">Women</Link>
                                             </li>
                                             <li className="nav-item dropdown">
-                                                <a href="#men" className="nav-link">Men</a>
+                                                <Link to="#men" className="nav-link">Men</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <a href="#kids" className="nav-link">Kids</a>
+                                                <Link to="#kids" className="nav-link">Kids</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <a href="#accessories" className="nav-link">Accessories</a>
+                                                <Link to="#accessories" className="nav-link">Accessories</Link>
                                             </li>
                                             <li className="nav-item dropdown">
                                                 <a className="nav-link dropdown-toggle" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
                                                 <ul className="dropdown-menu" aria-labelledby="pages">
-                                                    <li><a href="index.html" className="dropdown-item">About Us </a></li>
-                                                    <li><a href="index.html" className="dropdown-item">Shop </a></li>
-                                                    <li><a href="index.html" className="dropdown-item">Single Product </a></li>
-                                                    <li><a href="index.html" className="dropdown-item">Cart </a></li>
-                                                    <li><a href="index.html" className="dropdown-item">Checkout </a></li>
-                                                    <li><a href="index.html" className="dropdown-item">Blog </a></li>
-                                                    <li><a href="index.html" className="dropdown-item">Single Post </a></li>
-                                                    <li><a href="index.html" className="dropdown-item">Styles </a></li>
-                                                    <li><a href="index.html" className="dropdown-item">Contact </a></li>
-                                                    <li><a href="index.html" className="dropdown-item">Thank You </a></li>
-                                                    <li><a href="index.html" className="dropdown-item">My Account </a></li>
-                                                    <li><a href="index.html" className="dropdown-item">404 Error </a></li>
+                                                    <li><Link to="index.html" className="dropdown-item">About Us </Link></li>
+                                                    <li><Link to="index.html" className="dropdown-item">Shop </Link></li>
+                                                    <li><Link to="index.html" className="dropdown-item">Single Product </Link></li>
+                                                    <li><Link to="index.html" className="dropdown-item">Cart </Link></li>
+                                                    <li><Link to="index.html" className="dropdown-item">Checkout </Link></li>
+                                                    <li><Link to="index.html" className="dropdown-item">Blog </Link></li>
+                                                    <li><Link to="index.html" className="dropdown-item">Single Post </Link></li>
+                                                    <li><Link to="index.html" className="dropdown-item">Styles </Link></li>
+                                                    <li><Link to="index.html" className="dropdown-item">Contact </Link></li>
+                                                    <li><Link to="index.html" className="dropdown-item">Thank You </Link></li>
+                                                    <li><Link to="index.html" className="dropdown-item">My Account </Link></li>
+                                                    <li><Link to="index.html" className="dropdown-item">404 Error </Link></li>
                                                 </ul>
                                             </li>
                                             <li className="nav-item">
-                                                <a href="#brand" className="nav-link">Brand</a>
+                                                <Link to="#brand" className="nav-link">Brand</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <a href="#sale" className="nav-link">Sale</a>
+                                                <Link to="#sale" className="nav-link">Sale</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <a href="#blog" className="nav-link">Blog</a>
+                                                <Link to="#blog" className="nav-link">Blog</Link>
                                             </li>
                                         </ul>
 
