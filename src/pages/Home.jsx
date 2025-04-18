@@ -76,11 +76,8 @@ function Home() {
                 </defs>
             </svg>
 
-            <div className="preloader-wrapper">
-                <div className="preloader">
-                </div>
-            </div>
-            
+          
+
             <div className="offcanvas offcanvas-end" data-bs-scroll="true" tabIndex="-1" id="offcanvasCart" aria-labelledby="My Cart">
                 <div className="offcanvas-header justify-content-center">
                     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

@@ -141,7 +141,7 @@
   // document ready
   $(document).ready(function() {
     
-    initPreloader();
+    // initPreloader();
     initSwiper();
     initProductQty();
     initJarallax();

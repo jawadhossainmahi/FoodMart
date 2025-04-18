@@ -1,9 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
+import "../assets/css/frontend/dropdown.css";
 import Logo from "../assets/images/logo.png";
 import { Link } from 'react-router';
+import SignInModal from '../components/SignInModal';
+import SignUpModal from '../components/SignUpModal';
+import $ from "jquery";
 function Header() {
+
+    const [resetState, setResetState] = useState(false);
+    const modalDataReset = (e) => {
+        const modalSelector = $(e.target).attr("data-bs-target");
+
+        if (!modalSelector) return;
+
+        const $modal = $(modalSelector);
+
+        // Clear form fields (input, textarea, select)
+        $modal.find("input, textarea, select").each(function () {
+            if ($(this).is('select')) {
+                $(this).prop('selectedIndex', 0);
+            } else {
+                $(this).val('');
+            }
+        });
+
+        // Remove error messages or dynamically added elements
+        $modal.find(".errorMsg, .text-danger, .custom-appended-dom").remove();
+
+        setResetState(true);
+
+    };
+
     return (
         <>
+            <SignInModal />
+            <SignUpModal resetState={resetState} modalDataReset={modalDataReset} />
+
             <header>
                 <div className="container-fluid">
                     <div className="row py-3 border-bottom">
@@ -45,27 +77,53 @@ function Header() {
                             </div>
 
                             <ul className="d-flex justify-content-end list-unstyled m-0">
-                                <li>
-                                    <Link to="#" className="rounded-circle bg-light p-2 mx-1">
-                                        <svg width="24" height="24" viewBox="0 0 24 24"><use xlinkHref="#user"></use></svg>
+                                <li className="position-relative dropdown-hover">
+                                    <Link to="#" className="rounded-circle bg-light p-2 mx-1 d-inline-block">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <use xlinkHref="#user"></use>
+                                        </svg>
                                     </Link>
+
+                                    {/* Dropdown menu */}
+                                    <div className="dropdown-menu-custom">
+                                        <ul className="list-unstyled m-0">
+                                            <li>
+                                                <button type="button" class="btn text-dark" onClick={(e) => modalDataReset(e)} data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                    Login
+                                                </button>
+
+
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn text-dark" onClick={(e) => modalDataReset(e)} data-bs-toggle="modal" data-bs-target="#singUpModal">
+                                                    Signup
+                                                </button>
+
+
+                                            </li>
+
+                                        </ul>
+                                    </div>
                                 </li>
+
+                                {/* Other icons */}
                                 <li>
-                                    <Link to="#" className="rounded-circle bg-light p-2 mx-1">
+                                    <Link to="#" className="rounded-circle bg-light p-2 mx-1 d-inline-block">
                                         <svg width="24" height="24" viewBox="0 0 24 24"><use xlinkHref="#heart"></use></svg>
                                     </Link>
                                 </li>
                                 <li className="d-lg-none">
-                                    <Link to="#" className="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                                    <Link to="#" className="rounded-circle bg-light p-2 mx-1 d-inline-block" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
                                         <svg width="24" height="24" viewBox="0 0 24 24"><use xlinkHref="#cart"></use></svg>
                                     </Link>
                                 </li>
                                 <li className="d-lg-none">
-                                    <Link to="#" className="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">
+                                    <Link to="#" className="rounded-circle bg-light p-2 mx-1 d-inline-block" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">
                                         <svg width="24" height="24" viewBox="0 0 24 24"><use xlinkHref="#search"></use></svg>
                                     </Link>
                                 </li>
                             </ul>
+
 
                             <div className="cart text-end d-none d-lg-block dropdown">
                                 <button className="border-0 bg-transparent d-flex flex-column gap-2 lh-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">

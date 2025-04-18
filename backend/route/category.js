@@ -1,6 +1,21 @@
 import express from "express";
 import Category from "../model/category.js";
+import multer from "multer";
+
+
 const router = express.Router();
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, '/tmp/my-uploads')
+    },
+    filename: function (req, file, cb) {
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+        cb(null, file.fieldname + '-' + uniqueSuffix)
+    }
+})
+
+const upload = multer({ storage: storage })
 
 router.get("/", (req, res) => {
     res.send("Category route is working!");
@@ -16,7 +31,7 @@ router.get("/all-category", async (req, res) => {
     }
 });
 
-router.post("/add-new", async (req, res) => {
+router.post("/add-new",upload.single("icon"), async (req, res) => {
     try {
         const { title, icon, parent_id } = req.body;
 
