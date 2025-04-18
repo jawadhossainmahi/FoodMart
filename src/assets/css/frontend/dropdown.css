@@ -1,0 +1,26 @@
+.dropdown-hover .dropdown-menu-custom {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    min-width: 160px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    z-index: 1050;
+}
+
+.dropdown-hover:hover .dropdown-menu-custom {
+    display: block;
+}
+
+.dropdown-item-custom {
+    display: block;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.dropdown-item-custom:hover {
+    background-color: #f8f9fa;
+}
