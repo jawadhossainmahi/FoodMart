@@ -15,17 +15,17 @@ function Header() {
 
         const $modal = $(modalSelector);
 
-        // Clear form fields (input, textarea, select)
-        $modal.find("input, textarea, select").each(function () {
-            if ($(this).is('select')) {
-                $(this).prop('selectedIndex', 0);
-            } else {
-                $(this).val('');
-            }
-        });
+        // // Clear form fields (input, textarea, select)
+        // $modal.find("input, textarea, select").each(function () {
+        //     if ($(this).is('select')) {
+        //         $(this).prop('selectedIndex', 0);
+        //     } else {
+        //         $(this).val('');
+        //     }
+        // });
 
-        // Remove error messages or dynamically added elements
-        $modal.find(".errorMsg, .text-danger, .custom-appended-dom").remove();
+        // // Remove error messages or dynamically added elements
+        // $modal.find(".errorMsg, .text-danger, .custom-appended-dom").remove();
 
         setResetState(true);
 
@@ -34,7 +34,7 @@ function Header() {
     return (
         <>
             <SignInModal />
-            <SignUpModal resetState={resetState} modalDataReset={modalDataReset} />
+            <SignUpModal resetState={resetState} setResetState={setResetState} modalDataReset={modalDataReset} />
 
             <header>
                 <div className="container-fluid">

@@ -1,16 +1,100 @@
 import React, { useEffect, useRef, useState } from 'react'
 import $ from 'jquery';
+import { useForm } from "react-hook-form"
+import axiosInstance from '../axiosConfig';
+import { Bounce, toast } from 'react-toastify';
 
-function SignUpModal({resetState}) {
+function SignUpModal({ resetState, setResetState, modalDataReset }) {
+
+    const {
+        register,
+        handleSubmit,
+        watch,
+        reset,
+        formState: { errors, isSubmitting },
+    } = useForm()
+
+    const password = useRef();
+    password.current = watch("password");
+    const onSubmit = (data) => {
+        const modalEl = document.getElementById('singUpModal');
+        const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+        axiosInstance.post("/user/add-user", data)
+            .then((res) => {
+                console.log('Response:', res);  // Log the response from the server
+                modal.hide();
+                toast.success(res.response.data.message, {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    transition: Bounce,
+                });
+            })
+            .catch((err) => {
+                $(modalEl).find("small").remove();
+                if (err.response.data.errors) {
+
+                    err.response.data.errors.forEach(element => {
+
+                        document.querySelectorAll(`[name="${element.path}"]`).forEach(ele => {
+
+                            console.log(ele);
+                            const old_small = ele.parentElement.getElementsByTagName("small")[0];
+                            if (old_small) {
+                                old_small.remove();
+                            }
+
+
+                            let small = document.createElement("small");
+                            small.style.color = "red";
+                            small.innerText = element.msg;
+                            ele.parentElement.appendChild(small);
+                        })
+                    });
+                }
+
+                console.log();
+                toast.error(err.response.data.message, {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    transition: Bounce,
+                });
+
+            });
+
+
+
+        // err.errors.forEach(element => {
+        //     document.querySelectorAll(`[name="${element.path}"]`).forEach(ele => {
+
+        //         console.log(ele);
+
+        //         let small = document.createElement("small");
+        //         small.style.color = "red";
+        //         small.innerText = element.msg;
+        //         ele.parentElement.appendChild(small);
+        //     })
+        // });
+
+
+    };
     const [singUp, setSingUp] = useState({ first_name: "", last_name: "", email: "", password: "", cpassword: "" });
 
     const formSubmit = (e) => {
         e.preventDefault();
         let valid = formValidation()
-        if (valid) {
-            console.log("form is valid");
 
-        } 
 
     }
 
@@ -35,15 +119,11 @@ function SignUpModal({resetState}) {
     // Reset the form state when modal is closed
     useEffect(() => {
         if (resetState) {
-            setSingUp({
-                first_name: "",
-                last_name: "",
-                email: "",
-                password: "",
-                cpassword: "",
-            });
+            console.log("Resetting the form");
+            reset(); // Reset the form state and errors
+            setResetState(false); // Reset the state to false after resetting the form
         }
-    }, [resetState]); // Trigger the reset when `restState` changes
+    }, [resetState, setResetState]); // Trigger the reset when `restState` changes
 
 
 
@@ -52,7 +132,7 @@ function SignUpModal({resetState}) {
         <>
             <div class="modal fade" id="singUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                    <form id='singUpForm' onSubmit={(e) => formSubmit(e)}>
+                    <form id='singUpForm' onSubmit={handleSubmit(onSubmit)}>
 
                         <div class="modal-content">
                             <div class="modal-header">
@@ -61,78 +141,75 @@ function SignUpModal({resetState}) {
                             </div>
                             <div class="modal-body">
                                 <div className="row">
-
-                                    <div class="col-6 mb-3">
-                                        <label for="" class="form-label">First Name</label>
+                                    <div className="col-6 mb-3">
+                                        <label htmlFor="first_name" className="form-label">First Name</label>
                                         <input
                                             type="text"
-                                            class="form-control"
-                                            name="first_name"
+                                            className="form-control"
+                                            {...register("first_name", { required: "First name is required", minLength: { value: 4, message: "Minimum 4 characters" } })}
                                             id="first_name"
-                                            aria-describedby="helpId" required
-                                            placeholder="" value={singUp.first_name} onChange={(e) =>
-                                                setSingUp({ ...singUp, first_name: e.target.value })
-                                            }
                                         />
+                                        {errors.first_name && <small className='errorMsg' style={{ color: "red" }}>{errors.first_name.message}</small>}
                                     </div>
-                                    <div class="col-6 mb-3">
-                                        <label for="" class="form-label">Last Name</label>
+
+                                    <div className="col-6 mb-3">
+                                        <label htmlFor="last_name" className="form-label">Last Name</label>
                                         <input
                                             type="text"
-                                            class="form-control"
-                                            name="last_name"
+                                            className="form-control"
+                                            {...register("last_name", { required: "Last name is required", minLength: { value: 4, message: "Minimum 4 characters" } })}
                                             id="last_name"
-                                            aria-describedby="helpId" required
-                                            placeholder="" value={singUp.last_name} onChange={(e) =>
-                                                setSingUp({ ...singUp, last_name: e.target.value })
-                                            }
                                         />
+                                        {errors.last_name && <small className='errorMsg' style={{ color: "red" }}>{errors.last_name.message}</small>}
                                     </div>
-                                    <div class="col-12 mb-3">
-                                        <label for="" class="form-label">email</label>
+
+                                    <div className="col-12 mb-3">
+                                        <label htmlFor="email" className="form-label">Email</label>
                                         <input
                                             type="email"
-                                            class="form-control"
-                                            name="email"
+                                            className="form-control"
+                                            {...register("email", { required: "Email is required" })}
                                             id="email"
-                                            aria-describedby="helpId" required
-                                            placeholder="" value={singUp.email} onChange={(e) =>
-                                                setSingUp({ ...singUp, email: e.target.value })
-                                            }
                                         />
+                                        {errors.email && <small className='errorMsg' style={{ color: "red" }}>{errors.email.message}</small>}
                                     </div>
-                                    <div class="col-12 mb-3">
-                                        <label for="" class="form-label">Password</label>
+
+                                    <div className="col-12 mb-3">
+                                        <label htmlFor="password" className="form-label">Password</label>
                                         <input
                                             type="password"
-                                            class="form-control"
-                                            name="password"
+                                            className="form-control"
+                                            {...register("password", {
+                                                required: "Password is required",
+                                                minLength: { value: 4, message: "Minimum 4 characters" },
+                                            })}
                                             id="password"
-                                            aria-describedby="helpId" required
-                                            placeholder="" value={singUp.password} onChange={(e) =>
-                                                setSingUp({ ...singUp, password: e.target.value })
-                                            }
                                         />
+                                        {errors.password && <small className='errorMsg' style={{ color: "red" }}>{errors.password.message}</small>}
                                     </div>
-                                    <div class="col-12 mb-3">
-                                        <label for="" class="form-label">Confirm Password</label>
+
+                                    <div className="col-12 mb-3">
+                                        <label htmlFor="cpassword" className="form-label">Confirm Password</label>
                                         <input
                                             type="password"
-                                            class="form-control"
-                                            name="cpassword"
+                                            className="form-control"
+                                            {...register("cpassword", {
+                                                required: "Confirm password is required",
+                                                minLength: { value: 4, message: "Minimum 4 characters" },
+                                                validate: value =>
+                                                    value == password.current || "Passwords do not match",
+                                            })}
                                             id="cpassword"
-                                            aria-describedby="helpId" required
-                                            placeholder="" value={singUp.cpassword} onChange={(e) =>
-                                                setSingUp({ ...singUp, cpassword: e.target.value })
-                                            }
                                         />
+                                        {errors.cpassword && <small className='errorMsg' style={{ color: "red" }}>{errors.cpassword.message}</small>}
                                     </div>
+
 
 
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                <button type="submit" disabled={isSubmitting} class="btn btn-primary">Save changes</button>
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>

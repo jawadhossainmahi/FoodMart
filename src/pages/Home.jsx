@@ -16,11 +16,25 @@ import AppStore from "../assets/images/app-store.jpg";
 import PlayStore from "../assets/images/google-play.jpg";
 import Logo from "../assets/images/logo.png";
 import { Link } from 'react-router';
-
+import { Bounce, ToastContainer } from 'react-toastify';
 
 function Home() {
     return (
         <>
+
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={false}
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+                transition={Bounce}
+            />
             {/* before header section  */}
             <svg xmlns="http://www.w3.org/2000/svg"
 
@@ -76,7 +90,7 @@ function Home() {
                 </defs>
             </svg>
 
-          
+
 
             <div className="offcanvas offcanvas-end" data-bs-scroll="true" tabIndex="-1" id="offcanvasCart" aria-labelledby="My Cart">
                 <div className="offcanvas-header justify-content-center">
